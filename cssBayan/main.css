@@ -1,0 +1,134 @@
+
+/*ACCORDION*/
+
+body{
+    background-color: blanchedalmond;
+}
+
+.wrapper {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+  html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-size: 1.6rem;
+    font-family: "Inika", "Inter", "Verdana", "sans-serif";
+  }
+
+  #acc {
+    padding: 0;
+  }
+
+  #acc li {
+    list-style: none;
+    width: 100%;
+
+}
+
+#acc li label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.accordion-item__content {
+   visibility: hidden;
+   padding: 5% 0 0 20%;
+
+}
+
+.content__image {
+    max-height: 0;
+}
+
+.accrodion-item__input:checked .content__image {
+    max-height: 100vh;
+}
+
+
+.accrodion-item__input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    position: static;
+}
+
+.accordion-item__trigger {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    cursor: pointer;
+    color: blue;
+    border-bottom: 0.1rem solid gray;
+
+}
+
+.accordion-item__trigger:hover {
+    color: black;
+    transition: color .2s ease-out;
+}
+
+
+.accordion:hover {
+    cursor: pointer;
+}
+
+.accordion:hover .accordion-item__trigger{
+    color: black;
+}
+
+.accordion:hover .arrow{
+    visibility: visible;
+}
+
+.arrow__checked {
+    visibility: hidden;
+}
+
+.accordion:hover .arrow__checked {
+    visibility: visible;
+}
+
+.accrodion-item__input:checked .arrow__checked{
+    visibility: visible;
+}
+
+.arrow:hover {
+    transform: rotate(90deg);
+    transition: 0.3s;
+}
+
+.arrow {
+    visibility: hidden;
+}
+
+
+.accrodion-item__input:checked ~ .accordion-item__content {
+
+    visibility: visible;
+    transition: .5s ease-in-out;
+}
+
+.accrodion-item__input:checked ~ .accordion-item__trigger {
+    color: black;
+}
+
+.accrodion-item__input:hover ~ .accordion-item__content {
+    display: block;
+}
+
+.title {
+    border-bottom: 0.1rem solid gray;
+}
+

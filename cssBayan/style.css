@@ -59,6 +59,7 @@ h1 {
     padding: 3%
 }
 
+
 @media (hover: hover)  {
 
 .accordion-item__trigger:hover {
@@ -72,12 +73,13 @@ h1 {
     .accordion-item__trigger:hover .content__image {
         max-height: 100vh;
     }
-    .accordion:hover {
-        cursor: pointer;
-    }
 
     .accordion:hover .accordion-item__trigger{
         color: black;
+    }
+
+    .accordion-item__content:hover .content__image {
+        filter: grayscale(50%);
     }
 }
 
@@ -86,6 +88,10 @@ h1 {
     max-height: 0;
     transition: 2s all ease-in-out;
     object-fit: contain;
+}
+
+.content__image:active {
+    transform: rotate(-5deg);
 }
 
 .accrodion-item__input:checked ~ .accordion-item__trigger .content__image {
@@ -98,6 +104,7 @@ h1 {
 
 .accrodion-item__input:checked ~ .accordion-item__trigger .arrow {
     transform: rotate(90deg);
+
 }
 
 
@@ -117,6 +124,10 @@ h1 {
 .arrow {
     visibility: hidden;
     transition: .3s all
+}
+
+.arrow:active {
+    color:blueviolet;
 }
 
 .accordion:hover .arrow {
